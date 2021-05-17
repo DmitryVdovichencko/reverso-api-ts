@@ -1,0 +1,43 @@
+{
+  "name": "node-ts-boilerplate",
+  "version": "1.0.0",
+  "description": "node typescript template with babel and tests",
+  "main": "index.js",
+  "repository": "git@github.com:DmitryVdovichencko/node-ts-template.git",
+  "author": "Dmitry Vdovichenko <dmitry.vdovichencko@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "babel-node": "babel-node",
+    "check-types": "tsc",
+    "build": "npm run test && npm run rimraf && mkdir dist && NODE_ENV=production babel src --out-dir dist --extensions '.ts' --source-maps inline",
+    "prepublishOnly": "npm run build",
+    "rimraf": "rimraf dist",
+    "test": "jest --detectOpenHandles",
+    "lint": "eslint src && eslint test",
+    "start": "npm run build && node dist/index.js",
+    "dev": "nodemon"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/node": "^7.14.2",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4"
+  }
+}

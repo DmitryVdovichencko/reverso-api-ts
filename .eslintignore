@@ -1,0 +1,3 @@
+# Ignore dist files
+dist/*
+.babelrc
