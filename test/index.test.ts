@@ -1,5 +1,5 @@
-import sum from '../src/index';
+import Reverso from '../src/index';
 
-test('1 + 2 should return 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('Testing Reverso functionality', () => {
+  expect(Reverso).toBeDefined();
 });
