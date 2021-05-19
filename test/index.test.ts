@@ -26,8 +26,8 @@ test('Test Reverso check params should return false', () => {
 
 test('Test Reverso translate', async () => {
   const params: UserReversoParams = {
-    from: 'en',
-    to: 'ru',
+    from: 'english',
+    to: 'russian',
     text: 'hello',
   };
   const reverso = new Reverso(params);
