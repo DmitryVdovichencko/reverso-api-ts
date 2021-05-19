@@ -23,3 +23,13 @@ test('Test Reverso check params should return false', () => {
   const reverso = new Reverso(params);
   expect(reverso.checkParams()).toEqual(false);
 });
+
+test('Test Reverso translate', async () => {
+  const params: UserReversoParams = {
+    from: 'en',
+    to: 'ru',
+    text: 'hello',
+  };
+  const reverso = new Reverso(params);
+  console.log(await reverso.translate());
+});
